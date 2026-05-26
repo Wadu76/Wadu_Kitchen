@@ -14,22 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1778939639
+  lastShownTimestamp: 1779800647
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1778939639
+  checkedLastUpdateTimestamp: 1779800647
   lastQOTDResponse:
-    questionId: 302
-    questionText: 'Is this valid code?
+    questionId: 305
+    questionText: 'What is the result of this code:
 
-      <p>Color? myColor = null;</p>'
-    answerA: Yes
-    answerB: No, myColor is a struct and cannot be null
-    answerC: 
+      <p>int money = 2000000000;
+      // $2 billion</p>
+
+      <p>money += 1000000000; // Adding $1 billion</p>'
+    answerA: money == 3000000000
+    answerB: money == -1294967296
+    answerC: money == 0
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1778939639
+  lastQotdTimestamp: 1779800647
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleMay26MustHave.png
     topText: The BEST Unity Bundle in ages! Includes my most recommended asset 94%
@@ -37,20 +40,19 @@ MonoBehaviour:
     topLink: assetstore
     bottomText: Get 98% OFF on awesome REALISTIC HumbleBundle!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1778939639
+  lastDynamicHeaderTimestamp: 1779800647
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1778939639
+  websiteLatestMessageTimestamp: 1779800647
   websiteLatestVideos:
     videos:
-    - youTubeId: Fb5d_46JfVI
-      title: What are Unity Templates?
-    - youTubeId: pV-tmNmJFjY
-      title: Unity's AI Tools are GENUINELY useful!
-    - youTubeId: _7ACFqhnxTw
-      title: FREE Game Dev Mechanic Challenges! Traffic System and Keypad Access
-        (Learn by DOING!)
-    - youTubeId: 546J2n9Sn5o
-      title: The MOST AWESOME Unity Bundle is HERE! 94% OFF!
-  websiteLatestVideosTimestamp: 1778939639
+    - youTubeId: 3zUfuhJBl3c
+      title: First game made $1mil, second $0!
+    - youTubeId: R5LZ_dxi3Fc
+      title: Visual Studio Shortcuts (C# Tutorial for Beginners)
+    - youTubeId: LW1gycyV8VM
+      title: TOP 10 NEW Games, Made with Unity! (APRIL 2026)
+    - youTubeId: ywDrlnC-Y3M
+      title: The BEST Unity tool got EVEN BETTER! (and FREE!)
+  websiteLatestVideosTimestamp: 1779800647

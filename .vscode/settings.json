@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "kitchen Wadu.sln"
+    "dotnet.defaultSolution": "kitchen Wadu.sln",
+    "Codegeex.RepoIndex": true
 }
