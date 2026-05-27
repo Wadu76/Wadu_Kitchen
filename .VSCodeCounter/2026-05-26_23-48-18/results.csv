@@ -1,0 +1,21 @@
+"filename", "language", "C#", "JSON", "UnityUSS", "UnityUXML", "comment", "blank", "total"
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\CodeMonkeyFree.asmdef", "JSON", 0, 16, 0, 0, 0, 0, 16
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\CodeMonkeyFreeTesting.cs", "C#", 5, 0, 0, 0, 0, 5, 10
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\CodeMonkeyFreeEditor.asmdef", "JSON", 0, 18, 0, 0, 0, 0, 18
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\MainWindowFree\MainWindowFree.cs", "C#", 305, 0, 0, 0, 28, 88, 421
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\MainWindowFree\MainWindowFree.uss", "UnityUSS", 0, 0, 29, 0, 0, 5, 34
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\MainWindowFree\MainWindowFree.uxml", "UnityUXML", 0, 0, 0, 57, 0, 1, 58
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\ScriptableObjects\CodeMonkeyFreeSO.cs", "C#", 310, 0, 0, 0, 30, 71, 411
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\Templates\CodeTemplate.uxml", "UnityUXML", 0, 0, 0, 3, 0, 1, 4
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\Templates\TextTemplate.uxml", "UnityUXML", 0, 0, 0, 3, 0, 1, 4
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\Templates\VideoTemplate.uss", "UnityUSS", 0, 0, 3, 0, 0, 1, 4
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\CodeMonkeyFree\Editor\Templates\VideoTemplate.uxml", "UnityUXML", 0, 0, 0, 7, 0, 1, 8
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\PlayerInputActions.cs", "C#", 271, 0, 0, 0, 158, 22, 451
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\Scripts\ClearCounter.cs", "C#", 10, 0, 0, 0, 0, 2, 12
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\Scripts\GameInput.cs", "C#", 27, 0, 0, 0, 12, 7, 46
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\Scripts\Player.cs", "C#", 125, 0, 0, 0, 37, 22, 184
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\Scripts\PlayerAnimator.cs", "C#", 17, 0, 0, 0, 1, 6, 24
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Assets\Scripts\SelectedCounterVisual.cs", "C#", 31, 0, 0, 0, 5, 7, 43
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Packages\manifest.json", "JSON", 0, 47, 0, 0, 0, 1, 48
+"c:\Users\Wadu76\Desktop\Current_Term\Gamedev\kitchen Wadu\Packages\packages-lock.json", "JSON", 0, 419, 0, 0, 0, 1, 420
+"Total", "-", 1101, 500, 32, 70, 271, 242, 2216

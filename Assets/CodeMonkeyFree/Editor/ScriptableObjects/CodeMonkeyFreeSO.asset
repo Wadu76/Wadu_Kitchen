@@ -14,25 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1779800647
+  lastShownTimestamp: 1779887211
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1779800647
+  checkedLastUpdateTimestamp: 1779887211
   lastQOTDResponse:
-    questionId: 305
-    questionText: 'What is the result of this code:
+    questionId: 306
+    questionText: 'What is the value stored in percentage?
 
-      <p>int money = 2000000000;
-      // $2 billion</p>
+      <p>int health =
+      25;</p>
 
-      <p>money += 1000000000; // Adding $1 billion</p>'
-    answerA: money == 3000000000
-    answerB: money == -1294967296
-    answerC: money == 0
+      <p>int healthMax = 100;</p>
+
+      <p>float percentage = health
+      / healthMax;</p>'
+    answerA: 0.25f
+    answerB: 0
+    answerC: 2.5f
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1779800647
+  lastQotdTimestamp: 1779887211
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleMay26MustHave.png
     topText: The BEST Unity Bundle in ages! Includes my most recommended asset 94%
@@ -40,11 +43,11 @@ MonoBehaviour:
     topLink: assetstore
     bottomText: Get 98% OFF on awesome REALISTIC HumbleBundle!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1779800647
+  lastDynamicHeaderTimestamp: 1779887211
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1779800647
+  websiteLatestMessageTimestamp: 1779887211
   websiteLatestVideos:
     videos:
     - youTubeId: 3zUfuhJBl3c
@@ -55,4 +58,4 @@ MonoBehaviour:
       title: TOP 10 NEW Games, Made with Unity! (APRIL 2026)
     - youTubeId: ywDrlnC-Y3M
       title: The BEST Unity tool got EVEN BETTER! (and FREE!)
-  websiteLatestVideosTimestamp: 1779800647
+  websiteLatestVideosTimestamp: 1779887211

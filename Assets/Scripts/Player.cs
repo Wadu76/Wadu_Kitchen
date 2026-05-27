@@ -162,8 +162,9 @@ public class Player : MonoBehaviour
         {
             transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
         }
-        //transform.forward = Vector3.Slerp(transform.forward, movDir, Time.deltaTime * rotateSpeed);
-        //transform.forward = Vector3.Slerp(transform.forward, lastInteractDir, Time.deltaTime * rotateSpeed);
+        //transform.forward = Vector3.Slerp(transform.forward, movDir, Time.deltaTime * rotateSpeed); 不动的时候movDir为0，会导致rotate赋值为0提醒
+
+        //transform.forward = Vector3.Slerp(transform.forward, lastInteractDir, Time.deltaTime * rotateSpeed);这样会导致靠墙无法rotate因为靠墙我们会改movdir但是不会给lastdir更新值
     }
 
 

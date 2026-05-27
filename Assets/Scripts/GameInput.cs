@@ -29,7 +29,7 @@ public class GameInput : MonoBehaviour
         //?负责判空 this就是本身 是个sender
         //按下案件后interact_performed被调用，内部调用OnInteractAction订阅的方法
         OnInteractAction?.Invoke(this, EventArgs.Empty);
-        Debug.Log(obj);
+        //Debug.Log("Interacted!");
     }
 
     public Vector2 GetMovementVectorNormalized()
