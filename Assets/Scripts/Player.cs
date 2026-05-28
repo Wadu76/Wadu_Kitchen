@@ -6,23 +6,24 @@ using Unity.VisualScripting;
 //using System.Numerics;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IKitchenObjectParents
 {
     public static Player Instance { get; private set; }
     public event EventHandler<OnSelectedCounterChangedArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedArgs : EventArgs
     {
-        public ClearCounter selectedCounter;
+        public BaseCounter selectedCounter;
     }
 
     [SerializeField] private GameInput gameInput;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private LayerMask countersLayerMask;
+    [SerializeField] private Transform kitchenObjectHoldPoint;
+
     private bool isWalking;
     private Vector3 lastInteractDir;
-
-    // 用于记录目前选中的台
-    private ClearCounter selectedCounter;
+    private BaseCounter selectedCounter;// 用于记录目前选中的台
+    private KitchenObject kitchenObject;
 
 
     private void Awake()
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
         //原本重复的逻辑在InteractHandler里处理后，我们就可以通过selectedCounter是否为空来进行操作
         if (selectedCounter != null)
         {
-            selectedCounter.Interact();
+            selectedCounter.Interact(this);
         }
 
     }
@@ -87,13 +88,13 @@ public class Player : MonoBehaviour
             //raycast不是gameobject，因此我们要找对应组件就得获取到gameobj的组件
             //拿到transform就拿到了gameobj的访问全，就能访问其他component了
             //优先拿transform因为每个obj一直都会有
-            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
+            if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
                 //进来了说明有ClearCounter
-                if (clearCounter != selectedCounter)
+                if (baseCounter != selectedCounter)
                 {
                     //当被选择的柜台变量不是目前所检测到的，就更新为目前检测到的
-                    SetSelectedCounter(clearCounter);
+                    SetSelectedCounter(baseCounter);
                 }
             }
             else
@@ -168,7 +169,7 @@ public class Player : MonoBehaviour
     }
 
 
-    private void SetSelectedCounter(ClearCounter selectedCounter)
+    private void SetSelectedCounter(BaseCounter selectedCounter)
     {
         //this对于本脚本player实例，左边是player内部private变量初始化为传入的参数
         this.selectedCounter = selectedCounter;
@@ -179,5 +180,30 @@ public class Player : MonoBehaviour
             //用于广播给外部
             selectedCounter = selectedCounter,
         });
+    }
+
+    public Transform GetKitchenObjectFollowTransform()
+    {
+        return kitchenObjectHoldPoint;
+    }
+
+    public void SetKitchenObject(KitchenObject kitchenObject)
+    {
+        this.kitchenObject = kitchenObject;
+    }
+
+    public KitchenObject GetKitchenObject()
+    {
+        return kitchenObject;
+    }
+
+    public void ClearKitchenObject()
+    {
+        kitchenObject = null;
+    }
+
+    public bool HasKitchenObject()
+    {
+        return kitchenObject != null;
     }
 }
