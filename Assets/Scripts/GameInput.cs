@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 //目前处理的Input有：
-//移动输入Move
-//互动Interact
+//移动输入Move WASD 
+//互动Interact E 用于拾取和放下物品
+//InteractAlternat F 用于切菜
 
 public class GameInput : MonoBehaviour
 {
     public event EventHandler OnInteractAction;
+    public event EventHandler OnInteractAlternateAction;
+
     private PlayerInputActions playerInputActions;
 
     private void Awake()
@@ -21,6 +24,8 @@ public class GameInput : MonoBehaviour
         //performed是unitynew input system自带的event
         //按下按键后会触发
         playerInputActions.Player.Interact.performed += Interact_performed;
+        //接下来监测F 切菜动作
+        playerInputActions.Player.InteractAlternate.performed += InteractAlternate_performed;
 
     }
 
@@ -30,6 +35,10 @@ public class GameInput : MonoBehaviour
         //按下案件后interact_performed被调用，内部调用OnInteractAction订阅的方法
         OnInteractAction?.Invoke(this, EventArgs.Empty);
         //Debug.Log("Interacted!");
+    }
+    private void InteractAlternate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnInteractAlternateAction?.Invoke(this, EventArgs.Empty);
     }
 
     public Vector2 GetMovementVectorNormalized()

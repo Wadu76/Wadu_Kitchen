@@ -41,4 +41,21 @@ public class KitchenObject : MonoBehaviour
     }
 
 
+    public void DestroySelf()
+    {
+        //make the object on the counter it's child
+        kitchenObjectParent.ClearKitchenObject();
+        //then we destroy it
+        Destroy(gameObject);
+    }
+
+    public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParents kitchenObjectParents)
+    {
+        //now we create the slices on the counter
+        Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
+        //set the counter as parent 
+        KitchenObject kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
+        kitchenObject.SetKitchenObjectParent(kitchenObjectParents);
+        return kitchenObject;
+    }
 }

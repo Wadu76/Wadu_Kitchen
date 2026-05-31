@@ -42,6 +42,8 @@ public class Player : MonoBehaviour, IKitchenObjectParents
         // 即下面的GameInput_OnInteractAction函数被调用->
         // 处理后检测到clearcounter就输出Interacted! 识别+互动成功
         gameInput.OnInteractAction += GameInput_OnInteractAction;
+
+        gameInput.OnInteractAlternateAction += GameInput_OnInteractAlternateAction;
     }
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e)
@@ -50,6 +52,15 @@ public class Player : MonoBehaviour, IKitchenObjectParents
         if (selectedCounter != null)
         {
             selectedCounter.Interact(this);
+        }
+
+    }
+    private void GameInput_OnInteractAlternateAction(object sender, System.EventArgs e)
+    {
+        //原本重复的逻辑在InteractHandler里处理后，我们就可以通过selectedCounter是否为空来进行操作
+        if (selectedCounter != null)
+        {
+            selectedCounter.InteractAlternate(this);
         }
 
     }
@@ -130,7 +141,8 @@ public class Player : MonoBehaviour, IKitchenObjectParents
             //上面检测不能move的时候说不定可以x z方向单独移动
             //来尝试只往x方向能否移动
             Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
-            canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
+            // added movdir.x != 0 to avoid while rotating movedir=vec3.zero
+            canMove = moveDir.x != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
             if (canMove)
             {
                 //能在x上移动
@@ -140,7 +152,7 @@ public class Player : MonoBehaviour, IKitchenObjectParents
             {
                 //尝试z轴移动
                 Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
-                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
+                canMove = moveDir.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
                 if (canMove)
                 {
                     //能在Zed上动
